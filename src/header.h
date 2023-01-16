@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 struct Date
 {
     int month, day, year;
@@ -32,9 +33,14 @@ struct User
 // authentication functions
 void loginMenu(char a[50], char pass[50]);
 void registerMenu(char a[50], char pass[50]);
-const char *getPassword(struct User u);
+const char *getPassword(struct User *u);
+
 
 // system function
 void createNewAcc(struct User u);
+void updateAccInfo(struct User u);
 void mainMenu(struct User u);
 void checkAllAccounts(struct User u);
+void checkSpecificAccount(struct User u);
+void removeExistingAccount(struct User u);
+void makeTransaction(struct User u);
